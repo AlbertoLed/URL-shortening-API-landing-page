@@ -6,15 +6,15 @@ function Navbar() {
     return (
         <nav className='flex items-center px-6 py-10'>
             <img src={logo} alt="logo" />
-            <ul className='fixed top-[100px] left-[7%] w-[86%] bg-violet text-white rounded-xl flex flex-col items-center'>
-                <li>Features</li>
-                <li>Pricing</li>
-                <li>Resources</li>
-                <hr />
-                <li>Login</li>
-                <li>Sign Up</li>
+            <ul className='fixed top-[100px] left-[7%] w-[86%] bg-violet-200 text-white rounded-xl flex flex-col items-center space-y-8 py-9 px-7 font-bold text-lg'>
+                <li className='hover:cursor-pointer hover:opacity-80'>Features</li>
+                <li className='hover:cursor-pointer hover:opacity-80'>Pricing</li>
+                <li className='hover:cursor-pointer hover:opacity-80'>Resources</li>
+                <hr className='w-full border-violet-100 opacity-30'/>
+                <li className='hover:cursor-pointer hover:opacity-80'>Login</li>
+                <li className='hover:cursor-pointer hover:opacity-80'>Sign Up</li>
             </ul>
-            <IconContext.Provider value={{color: 'hsl(257, 7%, 63%)', size: '1.8em', className:'ml-auto t-violete'}}>
+            <IconContext.Provider value={{color: 'hsl(257, 7%, 63%)', size: '1.8em', className:'ml-auto t-violete hover:cursor-pointer'}}>
                 <FaBars />
             </IconContext.Provider>
         </nav>
