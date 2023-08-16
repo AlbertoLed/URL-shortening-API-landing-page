@@ -1,6 +1,7 @@
 import { IconContext } from 'react-icons'
 import { FaBars } from 'react-icons/fa6'
 import logo from '../../public/logo.svg'
+import Button from './Button'
 
 function Navbar() {
     return (
@@ -12,7 +13,7 @@ function Navbar() {
                 <li className='hover:cursor-pointer hover:opacity-80'>Resources</li>
                 <hr className='w-full border-violet-100 opacity-30'/>
                 <li className='hover:cursor-pointer hover:opacity-80'>Login</li>
-                <li className='hover:cursor-pointer hover:opacity-80'>Sign Up</li>
+                <li className='w-full'><Button variant='base' rounded='full' className='w-full'>Sign Up</Button></li>
             </ul>
             <IconContext.Provider value={{color: 'hsl(257, 7%, 63%)', size: '1.8em', className:'ml-auto t-violete hover:cursor-pointer'}}>
                 <FaBars />
