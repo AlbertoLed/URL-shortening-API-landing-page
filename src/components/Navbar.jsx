@@ -6,7 +6,7 @@ import Button from './Button'
 import classNames from 'classnames'
 
 function Navbar() {
-    const [showMobileNav, setShowMobileNav] = useState(true)
+    const [showMobileNav, setShowMobileNav] = useState(false)
     
     const toggleMobileNav = () => setShowMobileNav(prev => !prev)
 

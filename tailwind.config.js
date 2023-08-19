@@ -5,7 +5,6 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    fontFamily: {poppins: ['Poppins', 'sans-serif']},
     extend: {
       colors: {
         violet: {
@@ -17,10 +16,17 @@ export default {
         red: 'hsl(0, 87%, 67%)',
         gray: 'hsl(0, 0%, 75%)',
         blue: 'hsl(255, 11%, 22%)',
-
-
+      },
+      fontSize: {
+        '5xl': '2.6rem',
       }
     },
+    backgroundSize: {
+      50: '500px'
+    },
+    backgroundPosition: {
+      mobile: 'right calc(-140px + 7%) top'
+    }
   },
   plugins: [],
 }
