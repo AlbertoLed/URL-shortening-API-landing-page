@@ -25,12 +25,11 @@ export default {
     },
     backgroundSize: {
       'phone-size': '500px',
-      'desktop-size': 'min(120%, 750px)'
-      // 'desktop-size': '750px'
+      'desktop-size': 'min(120%, 750px)',
     },
     backgroundPosition: {
       'right-top': 'right calc(-140px + 7%) top',
-      'right-top-xl': 'right top'
+      'left-top': 'left 80px top',
     }
   },
   plugins: [],
