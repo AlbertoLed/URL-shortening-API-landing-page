@@ -19,13 +19,18 @@ export default {
       },
       fontSize: {
         '5xl': '2.6rem',
+        '7xl': '5rem',
+        '2xl': '1.4rem'
       }
     },
     backgroundSize: {
-      50: '500px'
+      'phone-size': '500px',
+      'desktop-size': 'min(120%, 750px)'
+      // 'desktop-size': '750px'
     },
     backgroundPosition: {
-      mobile: 'right calc(-140px + 7%) top'
+      'right-top': 'right calc(-140px + 7%) top',
+      'right-top-xl': 'right top'
     }
   },
   plugins: [],
