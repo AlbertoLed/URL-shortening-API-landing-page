@@ -7,11 +7,12 @@ function Main() {
     return(
         <main className="bg-gray-100">
             <Shortener>
-                <div className='bg-violet-200 p-6 space-y-4'>
+                <div className='bg-violet-200 bg-[url(assets/bg-shorten-mobile.svg)] bg-no-repeat bg-rt p-6 space-y-4 mx-[7%] rounded-xl'>
                     <ShortenerInput 
                     placeholder='Shorten a link here...'
+                    className='py-3 px-4'
                     />
-                    <Button className='font-bold text-lg py-2 w-full'>Shorten it!</Button>
+                    <Button size='xs' className='font-bold text-lg w-full'>Shorten it!</Button>
                 </div>
                 
             </Shortener>

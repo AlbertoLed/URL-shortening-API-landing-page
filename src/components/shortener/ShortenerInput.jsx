@@ -5,9 +5,9 @@ import classNames from 'classnames'
 function ShortenerInput({className, ...props}) {
     const {currentLink, updateCurrentLink} = useContext(ShortenerContext)
 
-    const defaultStyle = 'p-3 rounded-md'
+    const defaultStyle = 'p-3 rounded-md w-full'
 
-    const fin = classNames(defaultStyle, className)
+    const styles = classNames(defaultStyle, className)
 
     return(
         <input 
@@ -15,7 +15,7 @@ function ShortenerInput({className, ...props}) {
         name='link'
         value={currentLink}
         onChange={(e) => updateCurrentLink(e.target.value)}
-        className={fin}
+        className={styles}
         {...props}
         />
     )

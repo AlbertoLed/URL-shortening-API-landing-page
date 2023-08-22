@@ -33,6 +33,7 @@ export default {
     backgroundPosition: {
       'right-top': 'right calc(-140px + 7%) top',
       'left-top': 'left 80px top',
+      'rt': 'right top'
     }
   },
   plugins: [],
