@@ -19,7 +19,7 @@ function Navbar() {
     const listStyles = classNames(smStyles, mdStyles, {'fixed': showMobileNav}, {'hidden': !showMobileNav})
 
     return (
-        <nav className='flex items-center px-[7%] py-10 md:py-12 md:space-x-12 lg:px-[12%]'>
+        <nav className='flex items-center mx-auto w-[84%] py-10 md:py-12 md:space-x-12 lg:w-[75%] lg:max-w-[1150px]'>
             <img src={logo} alt="logo" />
             <ul className={listStyles}>
                 <li className='hover:cursor-pointer hover:opacity-80'>Features</li>
