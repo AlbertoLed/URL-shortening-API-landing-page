@@ -1,8 +1,11 @@
 import Shortener from "./shortener/Shortener"
 import ShortenerInput from "./shortener/ShortenerInput"
 import Button from "./Button"
+import Feature from "./Feature"
+import data from './Data.js'
 
 function Main() {
+    console.log(data)
 
     return(
         <main className="bg-gray-100 mt-[90px]">
@@ -23,10 +26,21 @@ function Main() {
                 
             </div>
             
-            <div className="mt-[90px] px-[7%] space-y-5">
-                <h2 className='text-blue text-3xl font-bold text-center'>Advanced Statistics</h2>
-                <p className='text-violet-100 text-center'>Track how your links are performing across the web with our advanced statistics dashboard.</p>
-            </div>
+            <section className="mt-[90px] px-[7%]">
+                <div className="space-y-5">
+                    <h2 className='text-blue text-3xl font-bold text-center'>Advanced Statistics</h2>
+                    <p className='text-violet-100 text-center'>Track how your links are performing across the web with our advanced statistics dashboard.</p>
+                </div>
+                {data.map(element => 
+                <Feature 
+                    key={element.id}
+                    title={element.title}
+                    text={element.text}
+                    image={element.image}
+                />)}
+
+            </section>
+            
             
         </main>
     )
