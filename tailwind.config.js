@@ -21,9 +21,11 @@ export default {
         blue: 'hsl(255, 11%, 22%)',
       },
       fontSize: {
+        '2xl': '1.4rem',
+        '3xl': '1.7rem',
         '5xl': '2.6rem',
         '7xl': '5rem',
-        '2xl': '1.4rem'
+        
       }
     },
     backgroundSize: {
