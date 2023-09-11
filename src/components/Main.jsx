@@ -5,18 +5,21 @@ import Feature from "./Feature"
 import data from './Data.js'
 
 function Main() {
+
+    const shortenerBgImage = 'bg-[url(assets/bg-shorten-mobile.svg)] bg-no-repeat bg-rt md:bg-[url(assets/bg-shorten-desktop.svg)] md:bg-cover md:bg-center'
+
     return(
         <main className="bg-gray-100 mt-[90px]">
             <div className="grid grid-cols-1 grid-rows-1">
-                <div className="bg-white h-[80px] w-full col-span-full row-span-full"></div>
-                <div className=" col-span-full row-span-full">
+                <div className="bg-white h-[80px] w-full col-span-full row-span-full md:h-[48px] lg:h-[81px]"></div>
+                <div className="col-span-full row-span-full">
                     <Shortener>
-                        <div className='bg-violet-200 bg-[url(assets/bg-shorten-mobile.svg)] bg-no-repeat bg-rt p-6 space-y-4 mx-[7%] rounded-xl'>
+                        <div className={`${shortenerBgImage} bg-violet-200 p-6 space-y-4 w-[86%] mx-auto rounded-xl md:flex md:space-x-6 md:space-y-0 lg:w-[76%] lg:max-w-[1150px] lg:py-[50px] lg:px-[60px]`}>
                             <ShortenerInput 
                             placeholder='Shorten a link here...'
-                            className='py-3 px-4'
+                            className='py-3 px-4 md:rounded-lg lg:text-xl lg:py-4 lg:px-8'
                             />
-                            <Button size='xs' className='font-bold text-lg w-full'>Shorten it!</Button>
+                            <Button size='xs' className='font-bold text-lg w-full md:w-[220px] md:rounded-lg lg:text-xl lg:py-4'>Shorten it!</Button>
                         </div>
                         
                     </Shortener>

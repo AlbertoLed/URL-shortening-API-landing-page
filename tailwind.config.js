@@ -31,11 +31,13 @@ export default {
     backgroundSize: {
       'phone-size': '500px',
       'desktop-size': 'min(120%, 750px)',
+      'cover': 'cover'
     },
     backgroundPosition: {
       'right-top': 'right calc(-140px + 7%) top',
       'left-top': 'left 80px top',
-      'rt': 'right top'
+      'rt': 'right top',
+      'center': ' center'
     }
   },
   plugins: [],
