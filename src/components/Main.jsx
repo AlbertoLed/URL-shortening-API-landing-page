@@ -5,8 +5,6 @@ import Feature from "./Feature"
 import data from './Data.js'
 
 function Main() {
-    console.log(data)
-
     return(
         <main className="bg-gray-100 mt-[90px]">
             <div className="grid grid-cols-1 grid-rows-1">
@@ -26,19 +24,24 @@ function Main() {
                 
             </div>
             
-            <section className="mt-[90px] px-[7%]">
+            <section className="mt-[90px] px-[7%] pb-[80px]">
                 <div className="space-y-5">
                     <h2 className='text-blue text-3xl font-bold text-center'>Advanced Statistics</h2>
                     <p className='text-violet-100 text-center'>Track how your links are performing across the web with our advanced statistics dashboard.</p>
                 </div>
-                {data.map(element => 
-                <Feature 
-                    key={element.id}
-                    title={element.title}
-                    text={element.text}
-                    image={element.image}
-                />)}
-
+                <div className="relative">
+                    {data.map(element => 
+                    <Feature 
+                        key={element.id}
+                        title={element.title}
+                        text={element.text}
+                        image={element.image}
+                        className='relative z-10 pt-[50px]'
+                    />)}
+                    <div className="absolute top-[55px] left-1/2 w-[4px] h-[90%] bg-cyan z-0"></div>
+                    <div className="absolute top-[55px] right-1/2 w-[4px] h-[90%] bg-cyan z-0"></div>
+                </div>
+                
             </section>
             
             
