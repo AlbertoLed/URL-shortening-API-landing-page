@@ -27,22 +27,22 @@ function Main() {
                 
             </div>
             
-            <section className="mt-[90px] px-[7%] pb-[80px]">
-                <div className="space-y-5">
-                    <h2 className='text-blue text-3xl font-bold text-center'>Advanced Statistics</h2>
-                    <p className='text-violet-100 text-center'>Track how your links are performing across the web with our advanced statistics dashboard.</p>
+            <section className="mt-[90px] mx-auto w-[86%] pb-[80px] lg:w-[76%] lg:max-w-[1150px]">
+                <div className="space-y-5 max-w-[520px] mx-auto">
+                    <h2 className='text-blue text-3xl font-bold text-center lg:text-5xl'>Advanced Statistics</h2>
+                    <p className='text-violet-100 text-center lg:text-lg'>Track how your links are performing across the web with our advanced statistics dashboard.</p>
                 </div>
-                <div className="relative">
+                <div className="relative mx-auto lg:grid lg:grid-cols-3 lg:grid-rows-1 lg:gap-x-[2.7%] lg:mt-[50px] lg:items-center">
                     {data.map(element => 
                     <Feature 
                         key={element.id}
                         title={element.title}
                         text={element.text}
                         image={element.image}
-                        className='relative z-10 pt-[50px]'
+                        className={`relative z-10 mt-[50px] lg:mt-0 ${element.id === 1 && `lg: mb-[85px]`} ${element.id === 3 && `lg:self-end`}`}
                     />)}
-                    <div className="absolute top-[55px] left-1/2 w-[4px] h-[90%] bg-cyan z-0"></div>
-                    <div className="absolute top-[55px] right-1/2 w-[4px] h-[90%] bg-cyan z-0"></div>
+                    <div className="absolute top-[55px] left-1/2 w-[4px] h-[90%] bg-cyan z-0 lg:top-1/2 lg:left-0 lg:w-full lg:h-[4px]"></div>
+                    <div className="absolute top-[55px] right-1/2 w-[4px] h-[90%] bg-cyan z-0 lg:top-auto lg:bottom-1/2 lg:right-0 lg:w-full lg:h-[4px]"></div>
                 </div>
                 
             </section>
