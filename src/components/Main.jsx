@@ -44,7 +44,11 @@ function Main() {
                     <div className="absolute top-[55px] left-1/2 w-[4px] h-[90%] bg-cyan z-0 lg:top-1/2 lg:left-0 lg:w-full lg:h-[4px]"></div>
                     <div className="absolute top-[55px] right-1/2 w-[4px] h-[90%] bg-cyan z-0 lg:top-auto lg:bottom-1/2 lg:right-0 lg:w-full lg:h-[4px]"></div>
                 </div>
-                
+            </section>
+
+            <section className="bg-violet-200 bg-[url('assets/bg-boost-mobile.svg')] h-[300px] flex flex-col items-center justify-center space-y-4">
+                <h2 className="text-white text-3xl font-bold">Boost your links today</h2>
+                <Button rounded="full" className="font-bold text-xl">Get Started</Button>
             </section>
             
             
