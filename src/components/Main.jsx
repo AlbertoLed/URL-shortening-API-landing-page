@@ -7,6 +7,7 @@ import data from './Data.js'
 function Main() {
 
     const shortenerBgImage = 'bg-[url(assets/bg-shorten-mobile.svg)] bg-no-repeat bg-rt md:bg-[url(assets/bg-shorten-desktop.svg)] md:bg-cover md:bg-center'
+    const boostBgImage = "bg-[url('assets/bg-boost-mobile.svg')] bg-no-repeat bg-cover md:bg-[url('assets/bg-boost-desktop.svg')]"
 
     return(
         <main className="bg-gray-100 mt-[90px]">
@@ -46,9 +47,9 @@ function Main() {
                 </div>
             </section>
 
-            <section className="bg-violet-200 bg-[url('assets/bg-boost-mobile.svg')] h-[300px] flex flex-col items-center justify-center space-y-4">
-                <h2 className="text-white text-3xl font-bold">Boost your links today</h2>
-                <Button rounded="full" className="font-bold text-xl">Get Started</Button>
+            <section className={`${boostBgImage} bg-violet-200 h-[300px] flex flex-col items-center justify-center space-y-4 lg:h-[250px]`}>
+                <h2 className="text-white text-3xl font-bold lg:text-5xl">Boost your links today</h2>
+                <Button rounded="full" className="font-bold text-xl px-12">Get Started</Button>
             </section>
             
             
