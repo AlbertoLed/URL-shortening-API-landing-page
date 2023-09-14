@@ -12,26 +12,26 @@ function Footer() {
                     <div className='space-y-5'>
                         <p className="font-bold">Features</p>
                         <ul className='text-gray-200 space-y-2 text-sm'>
-                            <li>Link Shortening</li>
-                            <li>Branded Links</li>
-                            <li>Analytics</li>
+                            <li className="hover:cursor-pointer hover:text-cyan transition-colors">Link Shortening</li>
+                            <li className="hover:cursor-pointer hover:text-cyan transition-colors">Branded Links</li>
+                            <li className="hover:cursor-pointer hover:text-cyan transition-colors">Analytics</li>
                         </ul>
                     </div>
                     <div className='space-y-5'>
                         <p className="font-bold">Resources</p>
                         <ul className='text-gray-200 space-y-2 text-sm'>
-                            <li>Blog</li>
-                            <li>Developers</li>
-                            <li>Support</li>
+                            <li className="hover:cursor-pointer hover:text-cyan transition-colors">Blog</li>
+                            <li className="hover:cursor-pointer hover:text-cyan transition-colors">Developers</li>
+                            <li className="hover:cursor-pointer hover:text-cyan transition-colors">Support</li>
                         </ul>
                     </div>
                     <div className='space-y-5'>
                         <p className="font-bold">Company</p>
                         <ul className='text-gray-200 space-y-2 text-sm'>
-                            <li>About</li>
-                            <li>Our Team</li>
-                            <li>Careers</li>
-                            <li>Contact</li>
+                            <li className="hover:cursor-pointer hover:text-cyan transition-colors">About</li>
+                            <li className="hover:cursor-pointer hover:text-cyan transition-colors">Our Team</li>
+                            <li className="hover:cursor-pointer hover:text-cyan transition-colors">Careers</li>
+                            <li className="hover:cursor-pointer hover:text-cyan transition-colors">Contact</li>
                         </ul>
                     </div>
                 </div>
