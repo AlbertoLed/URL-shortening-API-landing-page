@@ -18,7 +18,7 @@ function Button({children, size, rounded, variant, className, ...props}) {
     const bgColor = variant === 'applied' ? 'bg-violet-200' : 'bg-cyan'
     const borderRadius = rounded === 'full' ? 'rounded-full' : 'rounded-md'
 
-    const styles = classNames('hover:cursor-pointer hover:saturate-50 hover:brightness-150 text-white', sizeStyles( ), bgColor, borderRadius, className)
+    const styles = classNames('hover:cursor-pointer hover:saturate-50 hover:brightness-150 transition-all text-white', sizeStyles( ), bgColor, borderRadius, className)
 
     return(
         <button className={styles} {...props} >{children}</button>
