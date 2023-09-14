@@ -1,5 +1,5 @@
-import logo from '../../public/logo.svg'
 import { FaFacebook, FaSquareTwitter, FaPinterest, FaInstagram } from "react-icons/fa6"
+import { IconContext } from 'react-icons'
 
 function Footer() {
     return(
@@ -36,10 +36,13 @@ function Footer() {
                     </div>
                 </div>
                 <div className='flex space-x-6 lg:ml-[50px] xl:ml-[100px]'>
-                    <FaFacebook className='text-3xl' />
-                    <FaSquareTwitter className='text-3xl' />
-                    <FaPinterest className='text-3xl' />
-                    <FaInstagram className='text-3xl' />
+                    <IconContext.Provider value={{size: '1.7em', className:'hover:cursor-pointer hover:text-cyan transition-colors'}}>
+                        <FaFacebook />
+                        <FaSquareTwitter />
+                        <FaPinterest />
+                        <FaInstagram />
+                    </IconContext.Provider>
+                    
                 </div>
             </div>
         </footer>
