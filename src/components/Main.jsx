@@ -18,7 +18,7 @@ function Main() {
                         <div className={`${shortenerBgImage} bg-violet-200 p-6 space-y-4 w-[86%] mx-auto rounded-xl md:flex md:space-x-6 md:space-y-0 lg:w-[76%] lg:max-w-[1150px] lg:py-[50px] lg:px-[60px]`}>
                             <ShortenerInput 
                             placeholder='Shorten a link here...'
-                            className='py-3 px-4 md:rounded-lg lg:text-xl lg:py-4 lg:px-8'
+                            className='py-3 px-4 md:rounded-lg lg:text-xl lg:py-4 lg:px-8 focus:outline focus:outline-cyan focus:outline-2 transition-all'
                             />
                             <Button size='xs' className='font-bold text-lg w-full md:w-[220px] md:rounded-lg lg:text-xl lg:py-4'>Shorten it!</Button>
                         </div>
