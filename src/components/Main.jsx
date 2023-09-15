@@ -1,5 +1,6 @@
 import Shortener from "./shortener/Shortener"
 import ShortenerInput from "./shortener/ShortenerInput"
+import ShortenerButton from "./shortener/ShortenerButton"
 import Button from "./Button"
 import Feature from "./Feature"
 import data from './Data.js'
@@ -20,7 +21,9 @@ function Main() {
                             placeholder='Shorten a link here...'
                             className='py-3 px-4 md:rounded-lg lg:text-xl lg:py-4 lg:px-8 focus:outline focus:outline-cyan focus:outline-2 transition-all'
                             />
-                            <Button size='xs' className='font-bold text-lg w-full md:w-[220px] md:rounded-lg lg:text-xl lg:py-4'>Shorten it!</Button>
+                            <ShortenerButton
+                            className="font-bold text-lg w-full md:w-[220px] md:rounded-lg lg:text-xl lg:py-4"
+                            >Shorten it!</ShortenerButton>
                         </div>
                         
                     </Shortener>
