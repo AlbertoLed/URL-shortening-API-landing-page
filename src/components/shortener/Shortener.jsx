@@ -14,6 +14,7 @@ function Shortener({children}) {
 
         setShortenedLinks(prev => {
             return [...prev, {
+                link: currentLink,
                 shortLink: data.result.full_short_link,
                 copied: false
             }]
