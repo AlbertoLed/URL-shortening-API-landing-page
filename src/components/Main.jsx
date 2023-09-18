@@ -26,7 +26,7 @@ function Main() {
                             className="font-bold text-lg w-full md:w-[220px] md:rounded-lg lg:text-xl lg:py-4"
                             >Shorten it!</ShortenerButton>
                         </div>
-                        <div className="mx-auto w-[86%] mt-6 space-y-6">
+                        <div className="mx-auto w-[86%] mt-6 space-y-6 lg:w-[76%] lg:max-w-[1150px]">
                             <ShortenedLinks />
                         </div>
                         
