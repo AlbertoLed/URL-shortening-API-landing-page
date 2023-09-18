@@ -24,7 +24,7 @@ function Shortener({children}) {
     const updateCurrentLink = (text) => setCurrentLink(text)
 
     return(
-        <ShortenerContext.Provider value={{currentLink, updateCurrentLink, shortenIt}}>
+        <ShortenerContext.Provider value={{currentLink, updateCurrentLink, shortenIt, shortenedLinks}}>
             <div>{children}</div>
         </ShortenerContext.Provider>
     )
