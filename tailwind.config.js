@@ -13,7 +13,8 @@ export default {
           300: 'hsl(260, 8%, 14%)',
         },
         cyan: 'hsl(180, 66%, 49%)',
-        "cyan-h": "#71f0f0",
+        'cyan-h': '#71f0f0',
+        'cyan-a': '#76e3e3',
         red: 'hsl(0, 87%, 67%)',
         gray: {
           100: 'hsl(230, 25%, 95%)',
