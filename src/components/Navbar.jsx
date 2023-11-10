@@ -22,11 +22,11 @@ function Navbar() {
         <nav className='flex items-center mx-auto w-[86%] py-10 md:py-12 md:space-x-12 lg:w-[76%] lg:max-w-[1150px]'>
             <img src={logo} alt="logo" />
             <ul className={listStyles}>
-                <li className='hover:cursor-pointer hover:text-blue transition-colors'>Features</li>
-                <li className='hover:cursor-pointer hover:text-blue transition-colors md:ml-7'>Pricing</li>
-                <li className='hover:cursor-pointer hover:text-blue transition-colors md:ml-7'>Resources</li>
+                <li className='hover:cursor-pointer md:hover:text-blue transition-colors'>Features</li>
+                <li className='hover:cursor-pointer md:hover:text-blue transition-colors md:ml-7'>Pricing</li>
+                <li className='hover:cursor-pointer md:hover:text-blue transition-colors md:ml-7'>Resources</li>
                 <div className='h-[1px] w-full bg-violet-100 opacity-30 md:hidden'/>
-                <li className='hover:cursor-pointer hover:text-blue transition-colors md:ml-auto'>Login</li>
+                <li className='hover:cursor-pointer md:hover:text-blue transition-colors md:ml-auto'>Login</li>
                 <li className='w-full md:w-auto md:ml-7'>
                     <Button variant='base' rounded='full' size='sm' className='w-full md:w-max'>Sign Up</Button>
                 </li>
