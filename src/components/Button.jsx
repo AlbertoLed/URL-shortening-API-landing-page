@@ -15,10 +15,10 @@ function Button({children, size, rounded, variant, className, ...props}) {
         }
         return sizeStyle
     }
-    const bgColor = variant === 'applied' ? 'bg-violet-200' : 'bg-cyan'
+    const bgColor = variant === 'applied' ? 'bg-violet-200' : 'bg-cyan hover:bg-cyan-h'
     const borderRadius = rounded === 'full' ? 'rounded-full' : 'rounded-md'
 
-    const styles = classNames('hover:cursor-pointer hover:saturate-50 hover:brightness-150 transition-all text-white', sizeStyles( ), bgColor, borderRadius, className)
+    const styles = classNames('hover:cursor-pointer transition-colors text-white', sizeStyles( ), bgColor, borderRadius, className)
 
     return(
         <button className={styles} {...props} >{children}</button>
