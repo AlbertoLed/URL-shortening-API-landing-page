@@ -1,10 +1,13 @@
 import { useState, createContext } from 'react'
+import { nanoid } from 'nanoid'
 
 const ShortenerContext = createContext()
 
 function Shortener({children}) {
     const [currentLink, setCurrentLink] = useState('')
     const [shortenedLinks, setShortenedLinks] = useState([])
+
+    console.log(shortenedLinks)
 
     async function shortenIt() {
         try {
@@ -22,25 +25,53 @@ function Shortener({children}) {
             // console.log(res)
             const data = await res.json()
             // console.log(data)
-    
-            setShortenedLinks(prev => {
-                return [...prev, {
-                    link: currentLink,
-                    shortLink: data.result_url,
-                    copied: false
-                }]
-            })
+            if(!data.error) {
+                setShortenedLinks(prev => {
+                    return [...prev, {
+                        id: nanoid(),
+                        link: currentLink,
+                        shortLink: data.result_url,
+                        copied: false
+                    }]
+                })
+            }
+            else {
+                //Show an error message
+                console.log(data.error)
+            }
+            
         }
         catch(error) {
             // Show error message
-            console.log(error)
+            console.log("Error:", error)
         }
     }
 
     const updateCurrentLink = (text) => setCurrentLink(text)
 
+    // Copy link
+    const copyLink = async (id) => {
+        const index = shortenedLinks.findIndex(item => item.id === id)
+
+        try {
+            const res = await navigator.clipboard.writeText(shortenedLinks[index].shortLink)
+            // console.log("succeded:", res)
+            setShortenedLinks(item => {
+                const newLinksList = []
+                item.forEach(element => element.id === id ? 
+                    newLinksList.push({...element, copied: true}) : 
+                    newLinksList.push({...element, copied: false}))
+
+                return newLinksList
+            })
+        }
+        catch(error) {
+            console.log("Error message:", error)
+        }
+    }
+
     return(
-        <ShortenerContext.Provider value={{currentLink, updateCurrentLink, shortenIt, shortenedLinks}}>
+        <ShortenerContext.Provider value={{currentLink, updateCurrentLink, shortenIt, shortenedLinks, copyLink}}>
             <div>{children}</div>
         </ShortenerContext.Provider>
     )
