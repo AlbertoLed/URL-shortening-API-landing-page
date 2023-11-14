@@ -85,8 +85,16 @@ function Shortener({children}) {
         }
     }
 
+    // Delete link
+    const deleteLink = (id) => {
+        const index = shortenedLinks.findIndex(item => item.id === id)
+        
+        // Delete the link from the list
+        setShortenedLinks(item => item.toSpliced(index, 1))
+    }
+
     return(
-        <ShortenerContext.Provider value={{currentLink, updateCurrentLink, shortenIt, shortenedLinks, copyLink, handleEnter}}>
+        <ShortenerContext.Provider value={{currentLink, updateCurrentLink, shortenIt, shortenedLinks, copyLink, handleEnter, deleteLink}}>
             <div>{children}</div>
         </ShortenerContext.Provider>
     )
