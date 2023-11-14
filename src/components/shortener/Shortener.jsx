@@ -5,6 +5,7 @@ const ShortenerContext = createContext()
 
 function Shortener({children}) {
     const [currentLink, setCurrentLink] = useState('')
+    const [errorState, setErrorState] = useState(null)
     const [shortenedLinks, setShortenedLinks] = useState(JSON.parse(localStorage.getItem("shortenedLinksFF")) ?? [])
 
     // Save links in local storage
@@ -51,6 +52,10 @@ function Shortener({children}) {
             else {
                 //Show an error message
                 console.log(data.error)
+                if(data.error === "API Error: After sanitization URL is empty") {
+                    console.log("jaja")
+                    setErrorState("Please add a link")
+                }
             }
         }
         catch(error) {
@@ -97,7 +102,7 @@ function Shortener({children}) {
     }
 
     return(
-        <ShortenerContext.Provider value={{currentLink, updateCurrentLink, shortenIt, shortenedLinks, copyLink, handleEnter, deleteLink}}>
+        <ShortenerContext.Provider value={{currentLink, updateCurrentLink, shortenIt, shortenedLinks, copyLink, handleEnter, deleteLink, errorState}}>
             <div>{children}</div>
         </ShortenerContext.Provider>
     )

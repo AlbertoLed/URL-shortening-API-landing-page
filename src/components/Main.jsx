@@ -2,6 +2,7 @@ import Shortener from "./shortener/Shortener"
 import ShortenerInput from "./shortener/ShortenerInput"
 import ShortenerButton from "./shortener/ShortenerButton"
 import ShortenedLinks from "./shortener/ShortenedLinks"
+import ShortenerError from "./shortener/ShortenerError.jsx"
 import Button from "./Button"
 import Feature from "./Feature"
 import data from './Data.js'
@@ -18,10 +19,14 @@ function Main() {
                 <div className="col-span-full row-span-full">
                     <Shortener>
                         <div className={`${shortenerBgImage} bg-violet-200 p-6 space-y-4 w-[86%] mx-auto rounded-xl md:flex md:space-x-6 md:space-y-0 lg:w-[76%] lg:max-w-[1150px] lg:py-[50px] lg:px-[60px]`}>
-                            <ShortenerInput 
-                            placeholder='Shorten a link here...'
-                            className='py-3 px-4 md:rounded-lg lg:text-xl lg:py-4 lg:px-8 focus:outline focus:outline-cyan focus:outline-2 transition-all'
-                            />
+                            <div>
+                                <ShortenerInput 
+                                placeholder='Shorten a link here...'
+                                className='py-3 px-4 md:rounded-lg lg:text-xl lg:py-4 lg:px-8 focus:outline focus:outline-cyan focus:outline-2 transition-all'
+                                />
+                                <ShortenerError 
+                                className="text-red text-xs italic mt-2" />
+                            </div>
                             <ShortenerButton
                             className="font-bold text-lg w-full md:w-[220px] md:rounded-lg lg:text-xl lg:py-4"
                             >Shorten it!</ShortenerButton>

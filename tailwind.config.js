@@ -16,6 +16,7 @@ export default {
         'cyan-h': '#71f0f0',
         'cyan-a': '#76e3e3',
         red: 'hsl(0, 87%, 67%)',
+        salmon: '#f79494',
         gray: {
           100: 'hsl(230, 25%, 95%)',
           200: 'hsl(0, 0%, 75%)',
