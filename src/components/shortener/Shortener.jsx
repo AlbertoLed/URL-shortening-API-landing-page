@@ -1,13 +1,16 @@
-import { useState, createContext } from 'react'
+import { useState, createContext, useEffect } from 'react'
 import { nanoid } from 'nanoid'
 
 const ShortenerContext = createContext()
 
 function Shortener({children}) {
     const [currentLink, setCurrentLink] = useState('')
-    const [shortenedLinks, setShortenedLinks] = useState([])
+    const [shortenedLinks, setShortenedLinks] = useState(JSON.parse(localStorage.getItem("shortenedLinksFF")) ?? [])
 
-    console.log(shortenedLinks)
+    // Save links in local storage
+    useEffect(() => {
+        localStorage.setItem("shortenedLinksFF", JSON.stringify(shortenedLinks))
+    }, [shortenedLinks])
 
     // Shorten the link
     async function shortenIt() {
