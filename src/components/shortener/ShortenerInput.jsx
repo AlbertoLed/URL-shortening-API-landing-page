@@ -3,7 +3,7 @@ import { ShortenerContext } from "./Shortener"
 import classNames from 'classnames'
 
 function ShortenerInput({className, ...props}) {
-    const {currentLink, updateCurrentLink} = useContext(ShortenerContext)
+    const {currentLink, updateCurrentLink, handleEnter} = useContext(ShortenerContext)
 
     const defaultStyle = 'p-3 rounded-md w-full'
 
@@ -15,6 +15,7 @@ function ShortenerInput({className, ...props}) {
         name='link'
         value={currentLink}
         onChange={(e) => updateCurrentLink(e.target.value)}
+        onKeyDown={handleEnter}
         className={styles}
         {...props}
         />

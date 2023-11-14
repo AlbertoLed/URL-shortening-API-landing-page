@@ -9,8 +9,10 @@ function Shortener({children}) {
 
     console.log(shortenedLinks)
 
+    // Shorten the link
     async function shortenIt() {
         try {
+            // Use the API to shorten the link
             const res = await fetch(`https://url-shortener-service.p.rapidapi.com/shorten`, {
                 method: 'POST',
                 headers: {
@@ -23,8 +25,12 @@ function Shortener({children}) {
                 })
             })
             // console.log(res)
+
+            // Convert the response
             const data = await res.json()
             // console.log(data)
+
+            // If there IS NOT an error in the data
             if(!data.error) {
                 setShortenedLinks(prev => {
                     return [...prev, {
@@ -34,19 +40,28 @@ function Shortener({children}) {
                         copied: false
                     }]
                 })
+
+                //Clean up the input
+                setCurrentLink('')
             }
+            // If there is an error in the data
             else {
                 //Show an error message
                 console.log(data.error)
             }
-            
         }
         catch(error) {
+            // If the API is not working
+
             // Show error message
             console.log("Error:", error)
         }
     }
 
+    // Handle the enter in the input
+    const handleEnter = (e) => {e.key === "Enter" ? shortenIt() : null}
+
+    // Update the input
     const updateCurrentLink = (text) => setCurrentLink(text)
 
     // Copy link
@@ -71,7 +86,7 @@ function Shortener({children}) {
     }
 
     return(
-        <ShortenerContext.Provider value={{currentLink, updateCurrentLink, shortenIt, shortenedLinks, copyLink}}>
+        <ShortenerContext.Provider value={{currentLink, updateCurrentLink, shortenIt, shortenedLinks, copyLink, handleEnter}}>
             <div>{children}</div>
         </ShortenerContext.Provider>
     )
