@@ -5,9 +5,11 @@ export default function ShortenerError({className, children, ...props}) {
     const { errorState } = useContext(ShortenerContext)
 
     return(
+        errorState ? 
         <div 
         className={className}
         {...props}
-        >{errorState ? children ?? errorState : null}</div>
+        >{children ?? errorState}</div> :
+        null
     )
 }

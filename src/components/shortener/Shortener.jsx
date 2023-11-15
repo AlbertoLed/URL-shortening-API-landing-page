@@ -29,13 +29,14 @@ function Shortener({children}) {
                 })
             })
             // console.log(res)
+            // console.log(res.ok)
 
             // Convert the response
             const data = await res.json()
             // console.log(data)
 
             // If there IS NOT an error in the data
-            if(!data.error) {
+            if(res.ok) {
                 setShortenedLinks(prev => {
                     return [...prev, {
                         id: nanoid(),
@@ -47,14 +48,20 @@ function Shortener({children}) {
 
                 //Clean up the input
                 setCurrentLink('')
+                setErrorState(null)
             }
             // If there is an error in the data
             else {
                 //Show an error message
-                console.log(data.error)
+                // console.log(data.error)
                 if(data.error === "API Error: After sanitization URL is empty") {
-                    console.log("jaja")
                     setErrorState("Please add a link")
+                }
+                else if(data.error === "API Error: URL is invalid (check #1)") {
+                    setErrorState("URL is invalid")
+                }
+                else if(data.message === "You have exceeded the rate limit per minute for your plan, BASIC, by the API provider") {
+                    setErrorState("Error: Try again in a minute")
                 }
             }
         }
@@ -62,7 +69,8 @@ function Shortener({children}) {
             // If the API is not working
 
             // Show error message
-            console.log("Error:", error)
+            // console.log("Error:", error)
+            setErrorState("Error: Try again in a minute")
         }
     }
 

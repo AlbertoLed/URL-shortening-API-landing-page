@@ -1,13 +1,15 @@
 import { useContext } from 'react'
 import { ShortenerContext } from "./Shortener"
-import classNames from 'classnames'
+import { twMerge } from 'tailwind-merge'
 
-function ShortenerInput({className, ...props}) {
-    const {currentLink, updateCurrentLink, handleEnter} = useContext(ShortenerContext)
+function ShortenerInput({className, errorClass, ...props}) {
+    const {currentLink, updateCurrentLink, handleEnter, errorState} = useContext(ShortenerContext)
 
-    const defaultStyle = 'p-3 rounded-md w-full'
+    const defaultStyle = twMerge('p-3 rounded-md w-full', className)
 
-    const styles = classNames(defaultStyle, className)
+    const styles = errorState ? twMerge(defaultStyle, errorClass) : defaultStyle
+    console.log(errorState)
+    console.log(styles)
 
     return(
         <input 

@@ -18,14 +18,15 @@ function Main() {
                 <div className="bg-white h-[80px] w-full col-span-full row-span-full md:h-[48px] lg:h-[81px]"></div>
                 <div className="col-span-full row-span-full">
                     <Shortener>
-                        <div className={`${shortenerBgImage} bg-violet-200 p-6 space-y-4 w-[86%] mx-auto rounded-xl md:flex md:space-x-6 md:space-y-0 lg:w-[76%] lg:max-w-[1150px] lg:py-[50px] lg:px-[60px]`}>
-                            <div>
+                        <div className={`${shortenerBgImage} bg-violet-200 p-6 space-y-4 w-[86%] mx-auto rounded-xl md:flex md:space-x-6 md:space-y-0 md:py-9 lg:w-[76%] lg:max-w-[1150px] lg:py-[50px] lg:px-[60px]`}>
+                            <div className="w-full relative">
                                 <ShortenerInput 
                                 placeholder='Shorten a link here...'
                                 className='py-3 px-4 md:rounded-lg lg:text-xl lg:py-4 lg:px-8 focus:outline focus:outline-cyan focus:outline-2 transition-all'
+                                errorClass='outline outline-red outline-2 placeholder:text-salmon focus:outline-salmon'
                                 />
                                 <ShortenerError 
-                                className="text-red text-xs italic mt-2" />
+                                className="text-red text-xs italic mt-2 md:absolute" />
                             </div>
                             <ShortenerButton
                             className="font-bold text-lg w-full md:w-[220px] md:rounded-lg lg:text-xl lg:py-4"
