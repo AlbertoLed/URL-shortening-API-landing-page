@@ -2,7 +2,7 @@ import Button from "./Button"
 
 function Header() {
     return(
-        <header className='flex flex-col items-center mt-[-20px] space-y-6 md:flex-row lg:mt-[30px] lg:space-y-0'>
+        <header className='flex flex-col items-center mt-[93px] space-y-6 md:mt-[148px] md:flex-row lg:space-y-0'>
             {/* background image */}
             <div className='w-full h-[350px] bg-[url("./assets/illustration-working.svg")] bg-no-repeat bg-phone-size bg-right-top md:order-2 md:h-[350px] md:w-[0] md:basis-[46%] lg:h-[500px] lg:bg-left-top lg:bg-desktop-size lg:basis-[48%]'></div>
 

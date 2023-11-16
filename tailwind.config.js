@@ -30,6 +30,9 @@ export default {
         '5xl': '2.6rem',
         '7xl': '5rem',
         
+      },
+      width: {
+        'nav-76': 'calc(76% - 169px)'
       }
     },
     backgroundSize: {
